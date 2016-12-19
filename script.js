@@ -9,7 +9,7 @@ var decimalPoint=["."];
 
 var numInput=[0,1,2,3,4,5,6,7,8,9];
 
-
+/*Function to determine what to do with input depending on operator or decimal place.*/
 function getValue(input){
 	if(decimalPoint.includes(allInputs[allInputs.length-1])===true && input==="."){
 		console.log("Two decimal points not allowed input");
@@ -31,11 +31,13 @@ function update(){
 	$("#display").val(displayString);
 }
 
+/*Evaluates all the inputs to get answer.*/
 function getTotal(){
 	displayString=allInputs.join("");
 	$("#display").val(eval(displayString));
 }
 
+/*Clears all or part of allInputs array or gets the total.*/
 $(":button").on("click", function(){
 	
 	if(this.value==="AC"){
